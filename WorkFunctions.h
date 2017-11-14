@@ -36,19 +36,20 @@ int CouldNotFindJob(int rejected) {
 }
 
 int PickJob() {
-	return rand() & 4;
+	return rand() % 4;
 }
 
 int GetJobPayPeriod() {
 	return rand() % 2;
 }
 
+// 15 minutes is a year
 int Age(int seconds) {
-	return seconds / 1456;
+	return seconds / 900;
 }
 
-// 0.01% of having a heart attack
+// 0.001% of having a heart attack
 int HeartAttack() {
-	if (rand() % 1000) return 0;
+	if (rand() % 10000) return 0;
 	else return 1;
 }
